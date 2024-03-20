@@ -6,7 +6,8 @@ import ProductImage from "../assets/product.png";
 const Products = () => {
   const { company, category } = useParams();
   const [products, setProducts] = useState([]);
-  const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzEwOTEwNDcxLCJpYXQiOjE3MTA5MTAxNzEsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjJkMDVjNTM0LWRjMWMtNDkyMi04ZjJjLWJlZThkMTExMGJlOCIsInN1YiI6InBvb3ZhcmFzYW4uY3MyMUBiaXRzYXRoeS5hYy5pbiJ9LCJjb21wYW55TmFtZSI6ImdvTWFydCIsImNsaWVudElEIjoiMmQwNWM1MzQtZGMxYy00OTIyLThmMmMtYmVlOGQxMTEwYmU4IiwiY2xpZW50U2VjcmV0IjoicUJWUldpZUx6V3VUUGt1dCIsIm93bmVyTmFtZSI6IlBvb3ZhcmFzYW4iLCJvd25lckVtYWlsIjoicG9vdmFyYXNhbi5jczIxQGJpdHNhdGh5LmFjLmluIiwicm9sbE5vIjoiNzM3NjIxMUNTMjM5In0.Rgs2SV7uXyTVXSE_Zq9a_APAKqvpccRTxLv60o5f5Vo";
+  const accessToken =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzEwOTEwNDcxLCJpYXQiOjE3MTA5MTAxNzEsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjJkMDVjNTM0LWRjMWMtNDkyMi04ZjJjLWJlZThkMTExMGJlOCIsInN1YiI6InBvb3ZhcmFzYW4uY3MyMUBiaXRzYXRoeS5hYy5pbiJ9LCJjb21wYW55TmFtZSI6ImdvTWFydCIsImNsaWVudElEIjoiMmQwNWM1MzQtZGMxYy00OTIyLThmMmMtYmVlOGQxMTEwYmU4IiwiY2xpZW50U2VjcmV0IjoicUJWUldpZUx6V3VUUGt1dCIsIm93bmVyTmFtZSI6IlBvb3ZhcmFzYW4iLCJvd25lckVtYWlsIjoicG9vdmFyYXNhbi5jczIxQGJpdHNhdGh5LmFjLmluIiwicm9sbE5vIjoiNzM3NjIxMUNTMjM5In0.Rgs2SV7uXyTVXSE_Zq9a_APAKqvpccRTxLv60o5f5Vo";
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -20,7 +21,7 @@ const Products = () => {
           }
         );
         setProducts(response.data);
-        console.log(response.data)
+        console.log(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
       }

@@ -25,7 +25,9 @@ export default function AllProducts() {
   const navigate = useNavigate();
 
   const handleCardClick = (company, category) => {
-    navigate(`/products/companies/${company}/category/${category}/products?top=10&minPrice=1&maxPrice=30000`); 
+    navigate(
+      `/products/companies/${company}/category/${category}/products?top=10&minPrice=1&maxPrice=30000`
+    );
   };
 
   const generateProducts = () => {
@@ -48,12 +50,17 @@ export default function AllProducts() {
   const products = generateProducts();
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-start">
       {products.map((product) => (
         <div
           key={product.id}
           className="bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-4 mr-4"
-          onClick={() => handleCardClick(product.name.split(' ')[0], product.name.split(' ')[1])}
+          onClick={() =>
+            handleCardClick(
+              product.name.split(" ")[0],
+              product.name.split(" ")[1]
+            )
+          }
           style={{ cursor: "pointer" }}
         >
           <div className="md:flex">
